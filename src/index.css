@@ -14,6 +14,8 @@
 /*--- POPUP ---*/
 
 @import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/__message/popup__message.css);
+@import url(./blocks/popup/__info-body/popup__info-body.css);
 @import url(./blocks/popup/_opened/popup_opened.css);
 @import url(./blocks/popup/_opened/popup_opened_card.css);
 @import url(./blocks/popup/_card/popup_card.css);
@@ -66,6 +68,9 @@
 /*--- HEADER ---*/
 
 @import url(./blocks/header/header.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__btn/header__btn.css);
+@import url(./blocks/header/__nav/header__nav.css);
 @import url(./blocks/header/__logo/header__logo.css);
 
 /*--- FOOTER ---*/
@@ -94,3 +99,13 @@
 @import url(./blocks/card/__button/card__button.css);
 @import url(./blocks/card/__button/_type/card__button_type_active.css);
 @import url(./blocks/card/__urn/_display/card__urn_display_none.css);
+
+
+/*-- SIGN --*/
+
+@import url(./blocks/sign/sign.css);
+@import url(./blocks/sign/__title/sign__title.css);
+@import url(./blocks/sign/__input-wrapper/sign__input-wrapper.css);
+@import url(./blocks/sign/__input/sign__input.css);
+@import url(./blocks/sign/__text/sign__text.css);
+@import url(./blocks/sign/__btn/sign__btn.css);

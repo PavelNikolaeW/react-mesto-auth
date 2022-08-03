@@ -1,0 +1,7 @@
+.popup__info-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 37px;
+    margin: 24px 0 24px 0;
+}

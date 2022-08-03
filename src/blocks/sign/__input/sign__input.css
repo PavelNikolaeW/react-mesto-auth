@@ -1,0 +1,18 @@
+.sign__input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 13px 0 13px 0;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  background: #000;
+  color: #fff;
+}
+
+.sign__input:
+
+.sign__input::placeholder {
+  color: #cccccc;
+}
