@@ -125,7 +125,11 @@ function App() {
         localStorage.setItem('jwt', res.token);
         history.push('/');
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setStatusInfoTooltip(false);
+        setIsInfoTooltipOpen(true);
+      });
   }
 
   function handleLogout() {
@@ -149,14 +153,16 @@ function App() {
   }, [history]);
 
   useEffect(() => {
-    api
-      .getData([api.getUserInfo(), api.getInitialCards()])
-      .then(([userInfo, cards]) => {
-        setCurrentUser(userInfo);
-        setCards(cards);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+    if (loggedIn) {
+        api
+          .getData([api.getUserInfo(), api.getInitialCards()])
+          .then(([userInfo, cards]) => {
+            setCurrentUser(userInfo);
+            setCards(cards);
+          })
+          .catch((err) => console.log(err));
+    }
+  }, [loggedIn]);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>

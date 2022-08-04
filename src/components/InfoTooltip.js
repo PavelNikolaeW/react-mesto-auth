@@ -6,19 +6,14 @@ export default function InfoTooltip({ name, isOpen, status, onClose }) {
     <div className={'popup ' + (isOpen && 'popup_opened')} id={'popup-' + name}>
       <div className="popup__container">
         <div className="popup__body popup__body-small">
-          {status ? (
-            <div className="popup__info-body">
-              <img src={ok} alt="ok" />
-              <p className="popup__message">Вы успешно зарегистрировались!</p>
-            </div>
-          ) : (
-            <div className="popup__info-body">
-              <img src={error} alt="error" />
-              <div className="popup__message">
-                Что-то пошло не так! Попробуйте ещё раз.
-              </div>
-            </div>
-          )}
+          <div className="popup__info-body">
+            <img src={status ? ok : error} alt={status ? 'ok' : 'error'} />
+            <p className="popup__message">
+              {status
+                ? 'Вы успешно зарегистрировались!'
+                : 'Что-то пошло не так! Попробуйте ещё раз.'}
+            </p>
+          </div>
         </div>
         <button
           type="button"

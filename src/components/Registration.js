@@ -1,6 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-export default function Registration({handleRegistration}) {
+export default function Registration({ handleRegistration }) {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
@@ -36,7 +37,7 @@ export default function Registration({handleRegistration}) {
         />
       </div>
       <button className="sign__btn">Зарегистрироваться</button>
-      <p className="sign__text">Уже зарегистрированы? Войти</p>
+      <p className="sign__text">Уже зарегистрированы? <NavLink className="sign__text" to='/sign-in'> Войти</NavLink></p>
     </form>
   );
 }
